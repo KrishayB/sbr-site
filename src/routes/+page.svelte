@@ -34,6 +34,7 @@
         height: calc(100vh - 64px);
         overflow-x: hidden;
         padding-left: 0;
+        color: var(--text-color);
     }
 
     .intro-header {
@@ -41,11 +42,11 @@
         font-size: 3.5em;
         box-sizing: border-box;
         padding: 10px 10px 0px 10px;
-        background-color: var(--highlight);
+        background-color: var(--accent-color);
     }
 
     #intro {
-        background-image: linear-gradient(to left, purple, #1010AF);
+        background-color: var(--bg-color);
     }
 
     #h-weare {
