@@ -38,10 +38,6 @@
         position: relative;
     }
 
-    #nav-links a:hover {
-        color: var(--hover-text-dark);
-    }
-
     /* nesting styles would be pretty useful here... */
 
     #nav-links a::before {
@@ -50,7 +46,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: var(--highlight);
+        background-color: var(--accent-color);
         opacity: 0.5;
         height: 100%;
         /* highlight transition. I think its cool, please dont remove */
