@@ -13,7 +13,7 @@
 <style>
     #navbar {
         padding: 0px 10px;
-        background-color: black;
+        background-color: var(--text-color);
         height: 64px;
         /* grid my beloved */
         display: grid;
@@ -32,7 +32,7 @@
     #nav-links a {
         margin: 0 5vw;
         padding: 2px;
-        color: var(--primary-text-dark);
+        color: var(--bg-color);
         text-decoration: none;
         display: inline-block;
         position: relative;
