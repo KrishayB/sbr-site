@@ -1,6 +1,6 @@
 
 <nav id="navbar">
-    <a href="/"><img id="logo" alt="south bay robotics logo" src="/favicon.png"></a>
+    <a href="/"><img id="logo" src="/favicon.svg" alt="south bay robotics logo [svg]"/></a>
     <div id="nav-links">
         <a class="keep-mobile" href="/">Home</a>
         <a href="/#about">About</a>
@@ -13,7 +13,7 @@
 <style>
     #navbar {
         padding: 0px 10px;
-        background-color: var(--text-color);
+        background-color: var(--bg2-color);
         height: 64px;
         /* grid my beloved */
         display: grid;
@@ -32,7 +32,7 @@
     #nav-links a {
         margin: 0 5vw;
         padding: 2px;
-        color: var(--bg-color);
+        color: var(--text-color);
         text-decoration: none;
         display: inline-block;
         position: relative;

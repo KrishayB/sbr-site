@@ -5,11 +5,31 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<style>
-			:root {
-				--bg-color: #1E2326;
-				--accent-color: #83C092;
-				--text-color: #D3C6AA;
-			}
+            .gruvbox {
+				--bg-color: #282828;
+				--bg2-color: #1d2021;
+				--text-color: #ebdbb2;
+                --red: #cc241d;
+                --orange: #d65d0e;
+                --yellow: #fabd2f;
+                --green: #b8bb26;
+                --blue: #83a598;
+                --purple: #cc241d;
+                --aqua: #8ec07c;
+            }
+
+            .everforest {
+				--bg-color: #1e2326;
+				--bg2-color: #272e33;
+				--text-color: #d3c6aa;
+                --red: #e67e80;
+                --orange: #e69875;
+                --yellow: #dbbc7f;
+                --green: #a7c080;
+                --blue: #7fbbb3;
+                --purple: #d699b6;
+                --aqua: #83c092;
+            }
 
 			body, html {
 				height: 100%;
@@ -29,6 +49,6 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div style="display: contents" class="everforest">%sveltekit.body%</div>
 	</body>
 </html>

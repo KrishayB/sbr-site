@@ -4,6 +4,9 @@
 </svelte:head>
 
 <div id="intro" class="section">
+    <div id="d-img"></div>
+    <div id="d-ovr"></div>
+
     <h1 id="h-weare" class="intro-header">WE ARE</h1>
     <h1 id="h-sb" class="intro-header">SOUTH BAY</h1>
     <h1 id="h-r" class="intro-header">ROBOTICS</h1>
@@ -42,29 +45,51 @@
         font-size: 3.5em;
         box-sizing: border-box;
         padding: 10px 10px 0px 10px;
-        background-color: var(--accent-color);
     }
 
     #intro {
+        position: relative;
+    }
+
+    #d-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("/photos/rgbrobot.jpg");
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    #d-ovr {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         background-color: var(--bg-color);
+        opacity: 0.90;
     }
 
     #h-weare {
         top: 12vh;
         left: 10vw;
         width: 90vw;
+        background-color: var(--red);
+        color: var(--bg-color);
     }
 
     #h-sb {
         top: 10vh;
         left: 15vw;
         width: 85vw;
+        background-color: var(--green);
+        color: var(--bg-color);
     }
 
     #h-r {
         top: 8vh;
         left: 20vw;
         width: 80vw;
+        background-color: var(--blue);
+        color: var(--bg-color);
     }
 
     /* entropy... intro-p... */
