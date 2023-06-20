@@ -1,12 +1,15 @@
+<script>
+  import { base } from "$app/paths";
+</script>
 
 <nav id="navbar">
-    <a href="/"><img id="logo" src="/favicon.svg" alt="south bay robotics logo [svg]"/></a>
+    <a href="{base}/"><img id="logo" src="{base}/favicon.svg" alt="south bay robotics logo [svg]"/></a>
     <div id="nav-links">
-        <a class="keep-mobile" href="/">Home</a>
-        <a href="/#about">About</a>
-        <a href="/#donate">Donate</a>
-        <a href="/#contact">Contact</a>
-        <a class="keep-mobile" href="/blog">Blog</a>
+        <a class="keep-mobile" href="{base}/">Home</a>
+        <a href="{base}/#about">About</a>
+        <a href="{base}/#donate">Donate</a>
+        <a href="{base}/#contact">Contact</a>
+        <a class="keep-mobile" href="{base}/blog">Blog</a>
     </div>
 </nav>
 
