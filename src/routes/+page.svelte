@@ -111,7 +111,7 @@
 
     <p>
       Maintaining a team is extremely expensive, and every dollar for us
-      counts. Thank you- our gratefulness cannot be overstated.
+      counts. <b>Thank you- our gratefulness cannot be overstated.</b>
     </p>
 
     <a id="a-dono" href="https://www.paypal.com/donate/?business=89Q74XTTVBRMS&no_recurring=0&item_name=TESTING+PAYPAL+EMBED&currency_code=USD">paypal.me/[INSERT DESTINATION]</a>
@@ -309,6 +309,13 @@
         all: unset;
         border: 1px solid var(--purple);
         color: var(--purple);
+        padding: .5em .5em .5em .5em;
+        cursor: pointer;
+        margin-top: 5em;
+    }
+    #a-dono:hover {
+        background-color: var(--purple);
+        color: var(--bg2-color);
     }
 
     #contact {
