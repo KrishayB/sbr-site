@@ -1,3 +1,7 @@
+<script>
+  import { base } from "$app/paths";
+</script>
+
 <svelte:head>
     <title>South Bay Robotics</title>
 </svelte:head>
@@ -68,27 +72,25 @@
       dapibus consectetur. Sed ac ultricies nulla. Vivamus pretium ipsum ac
       ullamcorper tristique. Sed vitae facilisis felis. 
     </p>
-    <h2 id="tenents">-- Tenents --</h2>
+    <h2 id="tenents">Core Tenents</h2>
     <div id="d-tenents">
-        <div class="ten-wrapper">
-          <h3 id="h-education">Education</h3>
-          <div id="d-education" class="tenent">
-            <p class="ten-text">Preparing the students of today for the industries of tomorrow through hands on experience with industry-standard tools and equipment.</p>
-          </div>
+        <div>
+            <div id="d-education" class="tenent">
+                <h3 id="h-education">Education</h3>
+                <p class="ten-text">Preparing the students of today for the industries of tomorrow through hands on experience with industry-standard tools and equipment.</p>
+            </div>
         </div>
-
-        <div class="ten-wrapper">
-          <h3 id="h-accessibility">Accessibility</h3>
-          <div id="d-accessibilty" class="tenent">
-            <p class="ten-text">A membership base consisting of 8th-12th graders from all over the South Bay, of all different ethnic, educational, and financial backgrounds.</p>
-          </div>
+        <div>
+            <div id="d-accessibilty" class="tenent">
+                <h3 id="h-accessibility">Accessibility</h3>
+                <p class="ten-text">A membership base consisting of 8th-12th graders from all over the South Bay, of all different ethnic, educational, and financial backgrounds.</p>
+            </div>
         </div>
-
-        <div class="ten-wrapper">
-          <h3 id="h-networking">Networking</h3>
-          <div id="d-networking" class="tenent">
-            <p class="ten-text">Allowing members to form strong relationships with fellow like-minded individuals passionate in STEM and professionals knowledgeable in their respective fields.</p>
-          </div>
+        <div>
+            <div id="d-networking" class="tenent">
+                <h3 id="h-networking">Networking</h3>
+                <p class="ten-text">Allowing members to form strong relationships with fellow like-minded individuals passionate in STEM and professionals knowledgeable in their respective fields.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -113,7 +115,7 @@
       counts. <b>Thank you- our gratefulness cannot be overstated.</b>
     </p>
 
-    <img id="i-team" src="/photos/team.jpg"/>
+    <img id="i-team" src="{base}/photos/team.jpg" alt="Team Photo @ Quinlan Community Center"/>
 
     <a id="a-dono" href="https://www.paypal.com/donate/?business=89Q74XTTVBRMS&no_recurring=0&item_name=TESTING+PAYPAL+EMBED&currency_code=USD">paypal.me/[INSERT DESTINATION]</a>
 </div>
@@ -250,62 +252,75 @@
     }
 
     #d-tenents {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: start;
-        width: 100%;
+        width: max(300px, 30%);
         margin-bottom: 2em;
-    }
-
-    #d-education {
-        background-color: var(--red);
-    }
-    #h-education {
-        color: var(--red);
-    }
-
-    #d-accessibilty{
-        background-color: var(--green);
-    }
-    #h-accessibility{
-        color: var(--green);
-    }
-
-    #d-networking {
-        background-color: var(--blue);
-    }
-    #h-networking{
-        color: var(--blue);
-    }
-
-    .ten-wrapper {
-        width: 10em;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
+        background-color: yellow;
+        display: inline-flex;
+        justify-content: space-between;
+        position: relative;
     }
 
     .tenent {
-        width: 2em;
-        height: 2em;
-        transition: .8s;
-        overflow: hidden;
+        width: 3.5em;
+        height: 3.5em;
+        transition: .5s;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 1em;
+        border-radius: 2em;
+        flex-direction: column;
+        backdrop-filter: blur(20px);
     }
     .tenent:hover {
-        width: 20em;
-        height: 10em;
+        width: 100%;
+        height: max(2.5em, 25vw);
+        z-index: 3;
     }
     .tenent:hover > .ten-text {
       display: block;    
     }
     .ten-text {
       display: none;
-      text-align: center;
+      width: 75%;
+    }
+
+    #d-education {
+        border: 1px solid var(--red);
+        position: absolute;
+        left: 0;
+        text-align: left;
+    }
+    #d-education > p {
+        color: var(--red);
+    }
+    #h-education {
+        color: var(--red);
+    }
+
+    #d-accessibilty{
+        border: 1px solid var(--green);
+        position: absolute;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    #d-accessibilty > p {
+        color: var(--green);
+    }
+    #h-accessibility{
+        color: var(--green);
+    }
+
+    #d-networking {
+        border: 1px solid var(--blue);
+        position: absolute;
+        right: 0;
+        text-align: right;
+    }
+    #d-networking > p {
+        color: var(--blue);
+    }
+    #h-networking{
+        color: var(--blue);
     }
 
     #donate {
