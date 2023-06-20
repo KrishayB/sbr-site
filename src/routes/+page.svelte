@@ -1,4 +1,3 @@
-
 <svelte:head>
     <title>South Bay Robotics</title>
 </svelte:head>
@@ -114,13 +113,21 @@
       counts. <b>Thank you- our gratefulness cannot be overstated.</b>
     </p>
 
+    <img id="i-team" src="/photos/team.jpg"/>
+
     <a id="a-dono" href="https://www.paypal.com/donate/?business=89Q74XTTVBRMS&no_recurring=0&item_name=TESTING+PAYPAL+EMBED&currency_code=USD">paypal.me/[INSERT DESTINATION]</a>
 </div>
 
 <div id="contact">
-  <i class="icon fa-solid fa-envelope"></i>
-  <i class="icon fa-brands fa-github"></i>
-  <i class="icon fa-brands fa-instagram"></i>
+  <a style="all: unset;" href="mailto:southbayrobotics@gmail.com">
+    <i class="icon fa-solid fa-envelope"></i>
+  </a>
+  <a style="all: unset;" href="https://github.com/frc-sbr">
+    <i class="icon fa-brands fa-github"></i>
+  </a>
+  <a style="all: unset;" href="https://www.instagram.com/southbayrobotics/">
+    <i class="icon fa-brands fa-instagram"></i>
+  </a>
 </div>
 
 <style>
@@ -317,6 +324,11 @@
         background-color: var(--purple);
         color: var(--bg2-color);
     }
+    #i-team {
+      width: 40em;    
+      max-width: 100%;
+      margin-top: 5em;
+    }
 
     #contact {
       display: flex;
@@ -331,6 +343,10 @@
 
     .icon {
         font-size: 2.5em;
+        cursor: pointer;
+    }
+    .icon:hover {
+        border-bottom: .1em solid var(--text-color);
     }
 
     #entropy {
