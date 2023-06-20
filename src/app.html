@@ -4,7 +4,10 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+        <script defer src="/fontawesome-free-6.4.0-web/js/all.js"></script>
 		<style>
+            @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
             .gruvbox {
 				--bg-color: #282828;
 				--bg2-color: #1d2021;
@@ -39,11 +42,11 @@
 			}
 
 			* {
-				font-family: "Courier New", Courier, monospace;
+				font-family: Jost, "Courier New", Courier, monospace;
 			}
 
 			h1, h2, h3, h4, h5, h6 {
-				font-family: Helvetica, Arial, sans-serif;
+				font-family: Jost, Helvetica, Arial, sans-serif;
 			}
 		</style>
 		%sveltekit.head%
