@@ -322,7 +322,11 @@
       display: flex;
       flex-direction: row !important;
       justify-content: center;
-      gap: 2.5em;
+      gap: 5em;
+
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: .5em 0em .5em 0em;
     }
 
     .icon {
