@@ -118,7 +118,7 @@
 
     <img id="i-team" src="{base}/photos/team.jpg" alt="Team Photo @ Quinlan Community Center"/>
 
-    <a id="a-dono" href="https://www.paypal.com/donate/?business=89Q74XTTVBRMS&no_recurring=0&item_name=TESTING+PAYPAL+EMBED&currency_code=USD">paypal.me/[INSERT DESTINATION]</a>
+    <a id="a-dono" href="https://www.paypal.com/donate?token=TDM4PcwU_XomN8BABVFBUaLSFU_R0etIS434e7-Mijwzv8QTRlydqaAAoSVwXHaIawGMy5ix5mJNqME9">Donate Here</a>
 </div>
 
 <div id="contact">
@@ -270,7 +270,7 @@
         border-radius: 2em;
         flex-direction: column;
         backdrop-filter: blur(20px);
-        opacity: 0.9;
+        opacity: 0.95;
     }
     .tenent:hover {
         width: 100%;
