@@ -338,7 +338,7 @@
         color: var(--purple);
         padding: .5em .5em .5em .5em;
         cursor: pointer;
-        margin-top: 5em;
+        margin: 5em 0 5em 0;
     }
     #a-dono:hover {
         background-color: var(--purple);

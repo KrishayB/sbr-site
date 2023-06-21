@@ -8,8 +8,8 @@
         <a class="keep-mobile" href="{base}/">Home</a>
         <a href="{base}/#about">About</a>
         <a href="{base}/#donate">Donate</a>
-        <a href="{base}/#contact">Contact</a>
         <a class="keep-mobile" href="{base}/blog">Blog</a>
+        <a class="keep-mobile" id="join" href="https://docs.google.com/forms/d/e/1FAIpQLSfj4eeyhy6bzLdCWyisMMxD3JDiBKqnas9Op9Cj2_PMZOSEsg/viewform">Join</a>
     </div>
 </nav>
 
@@ -49,7 +49,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: var(--accent-color);
+        background-color: var(--purple);
         opacity: 0.5;
         height: 100%;
         /* highlight transition. I think its cool, please dont remove */
@@ -61,6 +61,12 @@
         /* highlight transition */
         width: 100%;
         transition: width 0.6s;
+    }
+
+    #join {
+        border: 2px solid var(--text-color);
+        text-align: center;
+        width: 4em;
     }
 
     @media screen and (max-width: 900px) {
