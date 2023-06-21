@@ -72,6 +72,7 @@
       dapibus consectetur. Sed ac ultricies nulla. Vivamus pretium ipsum ac
       ullamcorper tristique. Sed vitae facilisis felis. 
     </p>
+
     <h2 id="tenents">Core Tenents</h2>
     <div id="d-tenents">
         <div>
@@ -253,11 +254,10 @@
 
     #d-tenents {
         width: max(300px, 30%);
-        margin-bottom: 2em;
-        background-color: yellow;
         display: inline-flex;
         justify-content: space-between;
         position: relative;
+        margin-bottom: 5em;
     }
 
     .tenent {
@@ -270,10 +270,11 @@
         border-radius: 2em;
         flex-direction: column;
         backdrop-filter: blur(20px);
+        opacity: 0.9;
     }
     .tenent:hover {
         width: 100%;
-        height: max(2.5em, 25vw);
+        height: auto;
         z-index: 3;
     }
     .tenent:hover > .ten-text {
@@ -285,10 +286,11 @@
     }
 
     #d-education {
-        border: 1px solid var(--red);
+        border: 3px solid var(--red);
         position: absolute;
         left: 0;
         text-align: left;
+        background-color: color-mix(in srgb, var(--red) 25%, var(--bg-color));
     }
     #d-education > p {
         color: var(--red);
@@ -298,10 +300,11 @@
     }
 
     #d-accessibilty{
-        border: 1px solid var(--green);
+        border: 3px solid var(--green);
         position: absolute;
         transform: translateX(-50%);
         text-align: center;
+        background-color: color-mix(in srgb, var(--green) 25%, var(--bg-color));
     }
     #d-accessibilty > p {
         color: var(--green);
@@ -311,10 +314,12 @@
     }
 
     #d-networking {
-        border: 1px solid var(--blue);
+        border: 3px solid var(--blue);
         position: absolute;
         right: 0;
         text-align: right;
+        background-color: rgba(var(--blue), 0.5);
+        background-color: color-mix(in srgb, var(--blue) 25%, var(--bg-color));
     }
     #d-networking > p {
         color: var(--blue);
