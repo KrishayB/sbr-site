@@ -23,5 +23,8 @@
         position: absolute;
         top: 64px;
         width: 100%;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: calc(100vh - 64px)
     }
 </style>

@@ -1,5 +1,5 @@
 <script>
-  import { base } from "$app/paths";
+    import { base } from "$app/paths";
 </script>
 
 <nav id="navbar">
@@ -34,7 +34,7 @@
 
     #nav-links a {
         margin: 0 5vw;
-        padding: 2px;
+        padding: 2px 4px;
         color: var(--text-color);
         text-decoration: none;
         display: inline-block;

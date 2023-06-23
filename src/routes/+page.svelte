@@ -1,5 +1,6 @@
-<script>
-  import { base } from "$app/paths";
+<script lang="ts">
+  import { base } from '$app/paths';
+  import ContactFooter from '$lib/ContactFooter.svelte';
 </script>
 
 <svelte:head>
@@ -113,24 +114,16 @@
 
     <p>
       Maintaining a team is extremely expensive, and every dollar for us
-      counts. <b>Thank you- our gratefulness cannot be overstated.</b>
+      counts. <b>Thank you - our gratefulness cannot be overstated.</b>
     </p>
 
-    <img id="i-team" src="{base}/photos/team.jpg" alt="Team Photo @ Quinlan Community Center"/>
+    <img id="i-team" src="{base}/photos/team.jpg" alt="Team @ Quinlan Community Center"/>
 
     <a id="a-dono" href="https://www.paypal.com/donate?token=TDM4PcwU_XomN8BABVFBUaLSFU_R0etIS434e7-Mijwzv8QTRlydqaAAoSVwXHaIawGMy5ix5mJNqME9">Donate Here</a>
 </div>
 
 <div id="contact">
-  <a style="all: unset;" href="mailto:southbayrobotics@gmail.com">
-    <i class="icon fa-solid fa-envelope"></i>
-  </a>
-  <a style="all: unset;" href="https://github.com/frc-sbr">
-    <i class="icon fa-brands fa-github"></i>
-  </a>
-  <a style="all: unset;" href="https://www.instagram.com/southbayrobotics/">
-    <i class="icon fa-brands fa-instagram"></i>
-  </a>
+    <ContactFooter/>
 </div>
 
 <style>
@@ -157,7 +150,7 @@
 
     #intro {
         position: relative;
-        min-height: 550px;
+        min-height: 675px;
     }
 
     #d-img {
@@ -284,7 +277,6 @@
         flex-direction: column;
         backdrop-filter: blur(20px);
         opacity: 0.95;
-        /* this is background backup for older browsers that don't support color-mix */
         background-color: rgba(0, 0, 0, 0.5);
     }
 
@@ -313,7 +305,8 @@
         position: absolute;
         left: 0;
         text-align: center;
-        background-color: color-mix(in srgb, var(--red) 25%, var(--bg-color));
+        /*background-color: color-mix(in srgb, var(--red) 25%, var(--bg-color));*/
+        background-color: var(--mix-1);
     }
 
     #d-education > p {
@@ -329,8 +322,8 @@
         position: absolute;
         transform: translateX(-50%);
         text-align: center;
-        /* backup for older browsers that don't support color-mix */
-        background-color: color-mix(in srgb, var(--green) 25%, var(--bg-color));
+        /*background-color: color-mix(in srgb, var(--green) 25%, var(--bg-color));*/
+        background-color: var(--mix-2);
     }
 
     #d-accessibilty > p {
@@ -346,8 +339,8 @@
         position: absolute;
         right: 0;
         text-align: center;
-        background-color: rgba(var(--blue), 0.5);
-        background-color: color-mix(in srgb, var(--blue) 25%, var(--bg-color));
+        /*background-color: color-mix(in srgb, var(--blue) 25%, var(--bg-color));*/
+        background-color: var(--mix-3);
     }
 
     #d-networking > p {
@@ -390,16 +383,7 @@
 
         background-color: var(--bg-color);
         color: var(--text-color);
-        padding: .5em 0em .5em 0em;
-    }
-
-    .icon {
-        font-size: 2.5em;
-        cursor: pointer;
-    }
-
-    .icon:hover {
-        border-bottom: .1em solid var(--text-color);
+        padding: 1em 0em;
     }
 
     #entropy {
@@ -411,6 +395,13 @@
 
     #secret-nickname {
         display: none;
+    }
+
+    @media screen and (max-width: 950px) {
+        #d-img {
+            /* smaller image for mobile */
+            background-image: url("/photos/rgbrobot_mobile.jpg");
+        }
     }
 
 /* No alternate rules for now */
