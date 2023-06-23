@@ -157,6 +157,7 @@
 
     #intro {
         position: relative;
+        min-height: 550px;
     }
 
     #d-img {
@@ -171,29 +172,31 @@
     }
 
     .arrow {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 20px;
-      background-color: var(--bg-color);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        background-color: var(--bg-color);
     }
-    .arrow:before,
-    .arrow:after {
-      content: '';
-      position: absolute;
-      bottom: 100%;
-      width: 50%;
-      box-sizing: border-box;
+
+    .arrow:before, .arrow:after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        width: 50%;
+        box-sizing: border-box;
     }
+
     .arrow:before {
-      right: 50%;
-      border-bottom: 50px solid var(--bg-color);
-      border-right: 50px solid transparent;
+        right: 50%;
+        border-bottom: 50px solid var(--bg-color);
+        border-right: 50px solid transparent;
     }
+
     .arrow:after {
-      left: 50%;
-      border-bottom: 50px solid var(--bg-color);
-      border-left: 50px solid transparent;
+        left: 50%;
+        border-bottom: 50px solid var(--bg-color);
+        border-left: 50px solid transparent;
     }
 
     #d-ovr {
@@ -229,9 +232,9 @@
     }
 
     .text-section {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .text-section > h1 {
@@ -252,6 +255,16 @@
         background-color: var(--bg-color);
     }
 
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
     #d-tenents {
         width: max(300px, 30%);
         display: inline-flex;
@@ -261,7 +274,7 @@
     }
 
     .tenent {
-        width: 3.5em;
+        width: 7.5em;
         height: 3.5em;
         transition: .5s;
         display: flex;
@@ -271,30 +284,42 @@
         flex-direction: column;
         backdrop-filter: blur(20px);
         opacity: 0.95;
+        /* this is background backup for older browsers that don't support color-mix */
+        background-color: rgba(0, 0, 0, 0.5);
     }
+
     .tenent:hover {
         width: 100%;
         height: auto;
         z-index: 3;
     }
+
     .tenent:hover > .ten-text {
-      display: block;    
+        display: block;
+        opacity: 0;
+        animation-name: fadein;
+        animation-fill-mode: forwards;
+        animation-duration: .5s;
+        animation-delay: .5s;
     }
+
     .ten-text {
-      display: none;
-      width: 75%;
+        display: none;
+        width: 75%;
     }
 
     #d-education {
         border: 3px solid var(--red);
         position: absolute;
         left: 0;
-        text-align: left;
+        text-align: center;
         background-color: color-mix(in srgb, var(--red) 25%, var(--bg-color));
     }
+
     #d-education > p {
         color: var(--red);
     }
+
     #h-education {
         color: var(--red);
     }
@@ -304,11 +329,14 @@
         position: absolute;
         transform: translateX(-50%);
         text-align: center;
+        /* backup for older browsers that don't support color-mix */
         background-color: color-mix(in srgb, var(--green) 25%, var(--bg-color));
     }
+
     #d-accessibilty > p {
         color: var(--green);
     }
+
     #h-accessibility{
         color: var(--green);
     }
@@ -317,13 +345,15 @@
         border: 3px solid var(--blue);
         position: absolute;
         right: 0;
-        text-align: right;
+        text-align: center;
         background-color: rgba(var(--blue), 0.5);
         background-color: color-mix(in srgb, var(--blue) 25%, var(--bg-color));
     }
+
     #d-networking > p {
         color: var(--blue);
     }
+
     #h-networking{
         color: var(--blue);
     }
@@ -340,31 +370,34 @@
         cursor: pointer;
         margin: 5em 0 5em 0;
     }
+
     #a-dono:hover {
         background-color: var(--purple);
         color: var(--bg2-color);
     }
+
     #i-team {
-      width: 40em;    
-      max-width: 100%;
-      margin-top: 5em;
+        width: 40em;    
+        max-width: 100%;
+        margin-top: 5em;
     }
 
     #contact {
-      display: flex;
-      flex-direction: row !important;
-      justify-content: center;
-      gap: 5em;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 5em;
 
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      padding: .5em 0em .5em 0em;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        padding: .5em 0em .5em 0em;
     }
 
     .icon {
         font-size: 2.5em;
         cursor: pointer;
     }
+
     .icon:hover {
         border-bottom: .1em solid var(--text-color);
     }
