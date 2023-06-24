@@ -22,56 +22,34 @@
 <div id="about" class="section text-section">
     <h1 id="h-about">About</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel est et
-      massa pulvinar tempor in vel magna. Cras vitae augue mattis, viverra sem sed,
-      malesuada tellus. Aenean pellentesque ultrices luctus. Sed sed dictum erat.
-      Phasellus fringilla at mi aliquam ullamcorper. Vivamus elementum lectus id
-      auctor rutrum. Duis pulvinar libero sit amet faucibus aliquet. Duis blandit
-      neque non dignissim consequat. Vestibulum semper iaculis purus, imperdiet
-      cursus nibh posuere quis. Nulla ut velit a augue porta vestibulum a quis nulla.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-      cubilia curae;
+      South Bay Robotics is an independent, student-led First Robotics team
+      participating in the First Robotics Competition (FRC). We are a small and
+      spirited team, operating as a garage-based team and upholding our
+      commitment to provide a launchpad for all to uncover, experiment, and
+      ultimately bring their innovative ideas to life.
     </p>
 
     <p>
-      Fusce rhoncus tincidunt libero, nec aliquam nibh convallis vehicula. Donec
-      pulvinar ligula leo, vitae dictum libero pulvinar ac. In a vulputate urna.
-      Suspendisse euismod nunc tortor. Vestibulum placerat fermentum neque eget
-      iaculis. Fusce suscipit quis nulla eget blandit. Etiam ornare lacus non lacinia
-      accumsan. Sed eros ipsum, ultrices non quam non, porttitor pulvinar sem. Nunc
-      sodales volutpat condimentum. Aliquam vel congue libero, ac dapibus tortor.
-      Aliquam erat volutpat.
+      Our narrative is deeply intertwined with the legacy of Valkyrie Robotics,
+      a once-acclaimed community FRC team dedicated to employing
+      industry-standard technologies to achieve victory. Unfortunately, 2023
+      saw the unexpected dissolution of Valkyrie Robotics due to an array of
+      unforeseen events and the departure of key mentors. This left us standing
+      at a critical juncture - should we chart our own course or carry the
+      beacon of Valkyrie's legacy forward? We chose to honor the latter.
     </p>
 
     <p>
-      Curabitur pharetra interdum metus, sed pellentesque nunc lacinia et. Nullam
-      cursus sodales risus quis mollis. Aenean in elementum mi, non blandit quam.
-      Praesent arcu est, accumsan et lacinia sit amet, ullamcorper at justo. Nunc ac
-      lorem vitae purus pulvinar eleifend. Sed ut velit est. Sed congue non nunc vel
-      tincidunt. Pellentesque consequat dignissim sem, vitae sagittis tellus accumsan
-      et.
-    </p>
-
-    <p>
-      Mauris et tristique risus. Quisque et arcu ut lectus dignissim tempus. Vivamus
-      lobortis nisi at sagittis convallis. Donec in lorem neque. Etiam finibus purus
-      a erat rhoncus, quis elementum diam lobortis. Maecenas vitae sodales lorem. Sed
-      sodales nulla vitae suscipit sollicitudin. Cras aliquam tortor diam, at lacinia
-      orci euismod non. Integer consectetur arcu et odio semper cursus.
-    </p>
-
-    <p>
-      Duis ultricies mauris quis porta imperdiet. Sed sed risus porta, pulvinar metus
-      eget, condimentum libero. Mauris pellentesque nisl in tellus lobortis, blandit
-      gravida lectus sodales. Phasellus in feugiat turpis, ac sagittis dui. Donec
-      gravida nunc vitae mauris lacinia volutpat. Suspendisse venenatis ullamcorper
-      nisl quis fermentum. Sed ut sapien fringilla, placerat sapien sed, lobortis
-      ligula. Maecenas ullamcorper metus sit amet magna suscipit, faucibus mollis
-      ligula euismod. In a odio feugiat, vestibulum est in, imperdiet neque. Donec
-      quis fringilla nulla, sit amet pretium risus. Pellentesque tincidunt eros at
-      diam luctus, gravida dictum justo sodales. Vestibulum aliquam nisl eu dolor
-      dapibus consectetur. Sed ac ultricies nulla. Vivamus pretium ipsum ac
-      ullamcorper tristique. Sed vitae facilisis felis. 
+      As a team primarily comprised of students, we recognize the need for
+      creative solutions to address the challenges of today's rapidly evolving
+      world. We are devoted to nurturing an environment that inspires
+      innovative thinking and ardently actualizes these ideas. Our mission is
+      to equip our students to work in STEM and business sectors, molding them
+      into influential individuals capable of driving large-scale change. At
+      South Bay Robotics, our vision extends beyond just 'competition'; our aim
+      is to inspire creation, incite innovation, and instigate revolution. At
+      South Bay Robotics, we aren't just building robots; we're building the
+      leaders of tomorrow.
     </p>
 
     <h2 id="tenents">Core Tenents</h2>
