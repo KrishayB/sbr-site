@@ -21,14 +21,6 @@
     //posts to show
     let show_posts = posts;
     let tag_filter: string | null;
-    let clicked: boolean;
-
-    $: {
-        if (clicked) {
-            //short delay before reload, so url changes
-            setTimeout(() => window.location.reload(), 250);
-        }
-    }
 
     onMount(() => {
         tag_filter = $page.url.searchParams.get("tag_filter");
@@ -45,18 +37,14 @@
 
 <div id="blog-grid">
     {#if tag_filter}
-        <span><a id="clear-filter" href="{base}/blog" on:click={
-            () => {
-                clicked = true;
-            }
-        }>Clear Filters?</a></span>
+        <span><a id="clear-filter" href="{base}/blog" data-sveltekit-reload>Clear Filters?</a></span>
         <br>
     {/if}
     {#each show_posts as post, index}
         <div class="post-box">
             <div>
                 {#if index === 0}
-                    <PostTags tags={["Latest", ...post.tags]} bind:clicked={clicked}/>
+                    <PostTags tags={["Latest", ...post.tags]}/>
                 {:else}
                     <PostTags tags={post.tags}/>
                 {/if}

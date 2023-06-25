@@ -15,6 +15,7 @@ export type Post = {
     title: string,
     author: string,
     timestamp: number,
+    description?: string,
     cover_image?: string,
     cover_alt?: string,
     md_content: string,

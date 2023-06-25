@@ -4,17 +4,12 @@
 
     //exports
     export let tags: string[];
-    export let clicked: boolean = false;
 </script>
 
 <div id="post-tags">
     <!--max 5 tags-->
     {#each tags.slice(0, 5) as tag}
-        <span class="post-tag" title={tag.toLowerCase()}><a href="{base}/blog/?tag_filter={tag}#" on:click={
-            () => {
-                clicked = true;
-            }
-        }>{ tag }</a></span>
+        <span class="post-tag" title={tag.toLowerCase()}><a href="{base}/blog/?tag_filter={tag}" data-sveltekit-reload>{ tag }</a></span>
     {/each}
 </div>
 

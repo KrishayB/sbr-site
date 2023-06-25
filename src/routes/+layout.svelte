@@ -9,10 +9,9 @@
 
 <div id="main-container">
     <slot></slot>
-
-    <div id="contact">
+    <footer id="contact">
         <ContactFooter/>
-    </div>
+    </footer>
 </div>
 
 <style>

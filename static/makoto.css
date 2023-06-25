@@ -1,4 +1,9 @@
-blockquote  {
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#post-content blockquote  {
     margin: 0;
     margin: 8px 0px;
     padding: 4px 8px 4px 0px;
@@ -6,36 +11,31 @@ blockquote  {
     padding-left: 8px;
 }
   
-p {
+#post-content p {
     margin: 7px 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    margin-bottom: 5px;
-}
-
-.code-block {
+#post-content .code-block {
     font-family: 'Courier New', Courier, monospace;
     background-color: #d8d8d8;
     padding: 2px 4px;
     word-break: break-all;
 }
 
-img {
+#post-content img {
     max-width: 85%;
 }
 
-table {
+#post-content table {
     border-collapse: collapse;
 }
 
-th, td {
+#post-content th, #post-content td {
     padding: 2px 5px;
     border: 1px solid black;
 }
 
-a {
+#post-content a {
     color: currentColor;
 }
   

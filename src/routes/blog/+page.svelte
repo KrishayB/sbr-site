@@ -7,8 +7,6 @@
     export let data;
 
     let posts: Post[] = data.posts;
-
-    //
 </script>
 
 <BlogPosts {posts}/>
