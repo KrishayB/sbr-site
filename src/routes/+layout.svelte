@@ -1,5 +1,6 @@
 <script lang="ts">
     import Navbar from '$lib/Navbar.svelte';
+    import ContactFooter from '$lib/ContactFooter.svelte';
 </script>
 
 <div id="navbar-container">
@@ -8,6 +9,10 @@
 
 <div id="main-container">
     <slot></slot>
+
+    <div id="contact">
+        <ContactFooter/>
+    </div>
 </div>
 
 <style>
@@ -16,7 +21,7 @@
         left: 0;
         top: 0;
         /* make sure it is always on top */
-        z-index: 3;
+        z-index: 4;
     }
 
     #main-container {
@@ -25,6 +30,16 @@
         width: 100%;
         background-color: var(--bg-color);
         color: var(--text-color);
-        min-height: calc(100vh - 64px)
+        min-height: calc(100vh - 64px);
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 5em;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        padding: 1em 0em;
     }
 </style>

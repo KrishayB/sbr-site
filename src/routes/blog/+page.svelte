@@ -11,13 +11,4 @@
     //
 </script>
 
-<div id="posts-container">
-    <BlogPosts {posts}/>
-</div>
-
-<style>
-    #posts-container {
-        box-sizing: padding-box;
-        padding: 12px 10%;
-    }
-</style>
+<BlogPosts {posts}/>

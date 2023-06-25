@@ -3,7 +3,7 @@
 </script>
 
 <nav id="navbar">
-    <a href="{base}/"><img id="logo" src="{base}/favicon.svg" alt="south bay robotics logo [svg]"/></a>
+    <a href="{base}/"><img id="logo" src="{base}/favicon.png" alt="south bay robotics logo [svg]"/></a>
     <div id="nav-links">
         <a class="keep-mobile" href="{base}/">Home</a>
         <a href="{base}/#about">About</a>

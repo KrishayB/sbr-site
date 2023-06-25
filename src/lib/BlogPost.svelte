@@ -1,6 +1,7 @@
 <script lang="ts">
     //imports
     import type { Post } from '$lib/types.ts';
+    import PostTags from '$lib/PostTags.svelte';
     import { parse_md_to_html } from '$lib/makoto.ts';
     import { format_timestamp } from '$lib/utils.ts';
 
@@ -12,6 +13,9 @@
 
 <div>
     <div>
+        <div>
+            <PostTags tags={post.tags}/>
+        </div>
         <h1 id="post-title">{ post.title }</h1>
         <span id="post-info">{ post.author } - { format_timestamp(post.timestamp) }</span>
         {#if post.cover_image}
@@ -26,6 +30,10 @@
 </div>
 
 <style>
+    #post-title {
+        font-size: 2.7em;
+    }
+
     #post-cover-image {
         max-width: 100%;
     }

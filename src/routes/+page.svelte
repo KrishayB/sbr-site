@@ -78,15 +78,15 @@
 <div id="donate" class="section text-section">
     <h1 id="h-donate">Donate</h1>
     <p>
-      Thank you so much for considering donating. Generous donor support is
-      lifeblood of keeping South Bay Robotics.
+      Thank you so much for considering donating. Generous donor support is the
+      lifeblood of South Bay Robotics.
     </p>
 
     <p>
       As a community team comprised of multiple schools all across the South Bay,
       we unfortunately do not receive the same benefits that exclusive school
       teams do, namely free facilities and guaranteed funding. Consequently, we
-      almost exclusively rely on grants and donations- from people like you- to
+      almost exclusively rely on grants and donations - from people like you - to
       exist.
     </p>
 
@@ -98,10 +98,6 @@
     <img id="i-team" src="{base}/photos/team.jpg" alt="Team @ Quinlan Community Center"/>
 
     <a id="a-dono" href="https://www.paypal.com/donate?token=TDM4PcwU_XomN8BABVFBUaLSFU_R0etIS434e7-Mijwzv8QTRlydqaAAoSVwXHaIawGMy5ix5mJNqME9">Donate Here</a>
-</div>
-
-<div id="contact">
-    <ContactFooter/>
 </div>
 
 <style>
@@ -351,17 +347,6 @@
         width: 40em;    
         max-width: 100%;
         margin-top: 5em;
-    }
-
-    #contact {
-        display: flex;
-        flex-direction: row !important;
-        justify-content: center;
-        gap: 5em;
-
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        padding: 1em 0em;
     }
 
     #entropy {

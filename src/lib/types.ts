@@ -18,4 +18,5 @@ export type Post = {
     cover_image?: string,
     cover_alt?: string,
     md_content: string,
+    tags: string[],
 }

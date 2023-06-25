@@ -1,24 +1,38 @@
 [
     {
-        "slug": "famed-fraudster-exposed-as-upstanding-citizen",
-        "title": "Famed Fraudster Exposed as Upstanding Citizen",
+        "slug": "our-robots-tech-stack",
+        "title": "Our Robot's Tech Stack!",
+        "cover_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Toyota_Robot_at_Toyota_Kaikan.jpg/172px-Toyota_Robot_at_Toyota_Kaikan.jpg",
+        "cover_alt": "Our ROBOT!!!",
+        "author": "Skyler Mercedes",
+        "timestamp": 1687523751000,
+        "md_content": "Let's do a quick overview of the cutting edge software powering the robot!\n# OS\nThe operating system of the robot runs on a custom mix of **[Oracle Solaris](https://en.wikipedia.org/wiki/Oracle_Solaris)** and a slightly out of date version of **OpenBSD**.\nThis unique combination deters espionage (whether from other teams or state actors), and enables the robot to boot up at blazingly fast speeds of well under *a minute*.\n> # Special Modifications\n> Our custom Solaris/OpenBSD also has some special modifications to optimize and squeeze every bit of performance possible from the robot. Here are a few of the modifications we made:\n> - Bytes are 4 bits instead of 8. This simple move doubled the RAM of the robot from 16 GB to 32 GB!\n> - As it is known that RSA may be able to be cracked by powerful quantum computers, we switched to the Caesar Cipher for our encryption needs.\n> - If the robot becomes sentient and goes on a violent rampage, a bash script running as background service will alert our contacts at the CIA, who will then be able to instantly put the robot on the no-fly list.\n> - Just as IPv4 addresses have [ran out](https://en.wikipedia.org/wiki/IPv4_address_exhaustion), we anticipate IPv6 addresses will soon run out, perhaps as soon as the year 3000. Therefore, our custom OS uses and supports IPv7.\n# Central Control Systems\nThe robot is controlled by a program written inside of a turing complete game of Solitaire that emulates a CPU. This \"CPU\" uses Microsoft Excel instead of conventional memory and CPU registers, resulting in a very human readable (and portable!), and therefore easily debuggable, system. Also, the use of Excel prevents SQl injection attacks.\n# Robot Arm\nThe most impressive part of the robot is no doubt the **robot arm**. The arm is able to autonomously move on it's own, due to our proprietary system. The robot arm has a wifi module, and feeds sensor information to ChatGPT, which then gives the arm instructions.\n## Communication\nUnfortunately, the central control system cannot easily communicate with the robot arm, as the robot arm runs Windows NT. However, we came up, the central control system has a system of international maritime signal flags which it can use to convey instructions to the robot arm. This signal flag system also has the added benefit of being able to communicate with the driver, for example sending error messages from a distance.\n![Maritime Signal Flags being taken out](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Nautical_signal_flags_-_USS_Bonhomme_Richard_%28LHD_6%29.jpg/640px-Nautical_signal_flags_-_USS_Bonhomme_Richard_%28LHD_6%29.jpg)\n> # Interview with Daniel Gui, Lead Developer\n> **Q:** What was the most difficult part of programming the robot?\n> **A:** Installing Microsoft Excel on our Solaris/OpenBSD system.\n> **Q:** What technologies do you hope to incorporate into the robot?\n> **A:** In the future, we plan to write our own email server for the robot. The robot will send spam mail with malware to millions of addresses.\n> **Q**: And then?\n> **A:** The malware will turn the infected computers into part of a botnet, that will then [DDOS](https://en.wikipedia.org/wiki/Denial-of-service_attack) our opponent's robots.\n# Battery\nThe robot is extremely eco-friendly, since it is powered entirely by food waste. Food waste is dumped into a chute, and combusted. The resulting smoke restricts the visibility of opponents^\\*^. Anything works: half eaten cheeseburgers, salads, the flesh of felled enemies, etc..\n---\n\\* Although some have alleged this is not allowed by FRC 'rules', we firmly believe our First Amendment rights nullify those rules, should they exist.",
+        "tags": ["Software", "Tech"]
+    },
+    {
+        "slug": "test-post",
+        "title": "Test Post",
         "author": "Skyler Toyota",
         "timestamp": 1000000,
-        "md_content": "This morning, documents mailed anonymously to this blog revealed that famed fraudster Steve Placeholder was in fact an upstanding citizen, disappointing legions of his fans ^\\[1\\]^.\n> ## Interview with a Fan\n> \"I am still in shock... Steve, a man I have looked up to since my credit card skimming days, apparently hasn't so much as jaywalked. Allegedly, he even cleans up the litter at his local park! Ridiculous. An entire brand, built on lies. What a shame!\"\n> - John Doe"
+        "md_content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+        "tags": ["Update", "Travel", "Arbitrary Tag!"]
     },
     {
         "slug": "this-is-not-a-blog-post",
         "title": "This is not a Blog Post",
         "author": "Skyler General Motors",
-        "timestamp": 1687523751000,
-        "md_content": "Nothing to see here, move along."
+        "timestamp": 199900000,
+        "md_content": "Nothing to see here, move along.",
+        "tags": ["Tech"]
     },
     {
         "slug": "robot-becomes-sentient-demands-pizza-hut",
         "title": "Robot Becomes Sentient, Demands Pizza Hut",
         "cover_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Pizza_Hut_kebumen.jpg/640px-Pizza_Hut_kebumen.jpg",
+        "cover_alt": "PIZZA HUT",
         "author": "Skyler Chrysler",
         "timestamp": 1587523751000,
-        "md_content": "Hostage negotiators *lorem* ipsum ipsum lorem lorem foo bar.\nWeeeeeeeee.\n## Hola\nLorem ipsum died from heart failure, threat to lorem ipsum ipsum foo bar."
+        "md_content": "Hostage negotiators *lorem* ipsum ipsum lorem lorem foo bar.\nWeeeeeeeee.\n## Hola\nLorem ipsum dolorum colorum decroum courtroom, threat two lorem ipsum ipsum foo bar.",
+        "tags": ["Update", "Software", "Embedded", "Hardware"]
     }
 ]

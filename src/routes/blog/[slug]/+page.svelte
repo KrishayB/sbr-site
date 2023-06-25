@@ -16,13 +16,4 @@
     <link rel="stylesheet" href="{base}/makoto.css">
 </svelte:head>
 
-<div id="post-container">
-    <BlogPost {post}/>
-</div>
-
-<style>
-    #post-container {
-        box-sizing: padding-box;
-        padding: 12px 10%;
-    }
-</style>
+<BlogPost {post}/>
