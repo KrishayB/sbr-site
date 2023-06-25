@@ -20,4 +20,5 @@ export type Post = {
     cover_alt?: string,
     md_content: string,
     tags: string[],
+    hidden: boolean,
 }

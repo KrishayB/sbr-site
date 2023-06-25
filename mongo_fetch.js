@@ -14,7 +14,7 @@ if (process.env.MONGODB_CONNECTION_STRING) {
         const db = client.db("TongMemorialDatabase");
         const posts_coll = db.collection("blog_posts");
         //fetch all blog posts
-        let all_posts = await (await posts_coll.find()).toArray();
+        let all_posts = await (await posts_coll.find({ hidden: false })).toArray();
         //write to json file
         //writeFileSync("./src/lib/posts.json", JSON.stringify(all_posts), "utf-8");
     }

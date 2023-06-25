@@ -41,17 +41,19 @@
         <br>
     {/if}
     {#each show_posts as post, index}
-        <div class="post-box">
-            <div>
-                {#if index === 0}
-                    <PostTags tags={["Latest", ...post.tags]}/>
-                {:else}
-                    <PostTags tags={post.tags}/>
-                {/if}
+        {#if !post.hidden}
+            <div class="post-box">
+                <div>
+                    {#if index === 0}
+                        <PostTags tags={["Latest", ...post.tags]}/>
+                    {:else}
+                        <PostTags tags={post.tags}/>
+                    {/if}
+                </div>
+                <h3 class="post-title"><a href="{base}/blog/{ post.slug }">{ post.title }</a></h3>
+                <span class="post-info">{ post.author } - { format_timestamp(post.timestamp) }</span>
             </div>
-            <h3 class="post-title"><a href="{base}/blog/{ post.slug }">{ post.title }</a></h3>
-            <span class="post-info">{ post.author } - { format_timestamp(post.timestamp) }</span>
-        </div>
+        {/if}
     {/each}
 </div>
 
