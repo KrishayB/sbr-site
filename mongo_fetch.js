@@ -16,7 +16,7 @@ if (process.env.MONGODB_CONNECTION_STRING) {
         //fetch all blog posts
         let all_posts = await (await posts_coll.find({ hidden: false })).toArray();
         //write to json file
-        //writeFileSync("./src/lib/posts.json", JSON.stringify(all_posts), "utf-8");
+        //writeFileSync("./src/lib/blog_posts.json", JSON.stringify(all_posts), "utf-8");
     }
     main();
 }
