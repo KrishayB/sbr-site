@@ -1,5 +1,6 @@
 <script lang="ts">
     //imports
+    import { onMount } from 'svelte';
     import { base } from "$app/paths";
     import { page } from "$app/stores"; 
     import type { Post } from '$lib/types.ts';
@@ -20,8 +21,16 @@
     //posts to show
     let show_posts = posts;
     let tag_filter: string | null;
+    let clicked: boolean;
 
     $: {
+        if (clicked) {
+            //short delay before reload, so url changes
+            setTimeout(() => window.location.reload(), 250);
+        }
+    }
+
+    onMount(() => {
         tag_filter = $page.url.searchParams.get("tag_filter");
         if (tag_filter) {
             show_posts = posts.filter((item) => item.tags.includes(tag_filter!));
@@ -31,19 +40,23 @@
         } else {
             show_posts = posts;
         }
-    }
+    });
 </script>
 
 <div id="blog-grid">
     {#if tag_filter}
-        <span><a id="clear-filter" href="{base}/blog">Clear Filters?</a></span>
+        <span><a id="clear-filter" href="{base}/blog" on:click={
+            () => {
+                clicked = true;
+            }
+        }>Clear Filters?</a></span>
         <br>
     {/if}
     {#each show_posts as post, index}
         <div class="post-box">
             <div>
                 {#if index === 0}
-                    <PostTags tags={["Latest", ...post.tags]}/>
+                    <PostTags tags={["Latest", ...post.tags]} bind:clicked={clicked}/>
                 {:else}
                     <PostTags tags={post.tags}/>
                 {/if}

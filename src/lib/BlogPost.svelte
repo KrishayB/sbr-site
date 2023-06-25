@@ -7,8 +7,6 @@
 
     //exports
     export let post: Post;
-
-    //
 </script>
 
 <div>
