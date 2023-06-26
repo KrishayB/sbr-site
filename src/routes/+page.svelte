@@ -97,7 +97,7 @@
 
     <img id="i-team" src="{base}/photos/team.jpg" alt="Team @ Quinlan Community Center"/>
 
-    <a id="a-dono" href="https://www.paypal.com/donate?token=TDM4PcwU_XomN8BABVFBUaLSFU_R0etIS434e7-Mijwzv8QTRlydqaAAoSVwXHaIawGMy5ix5mJNqME9">Donate Here</a>
+    <a id="a-dono" href="https://www.paypal.com/donate?token=YqKsKxSKnXBe8lAZA-bqE71VJplXjvB2earQuL7NjNLvTS5O4-51NUPsr8c-bgSBykCrwMtb8ncfKHhi">Donate Here</a>
 </div>
 
 <style>
@@ -117,7 +117,7 @@
 
     .intro-header {
         position: relative;
-        font-size: 3.5em;
+        font-size: 5em;
         box-sizing: border-box;
         padding: 10px 10px 0px 10px;
     }
@@ -202,6 +202,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        font-size: 1.5em;
     }
 
     .text-section > h1 {
@@ -233,7 +234,7 @@
     }
 
     #d-tenents {
-        width: max(300px, 30%);
+        width: max(800px, 50%);
         display: inline-flex;
         justify-content: space-between;
         position: relative;
@@ -335,7 +336,8 @@
         color: var(--purple);
         padding: .5em .5em .5em .5em;
         cursor: pointer;
-        margin: 5em 0 5em 0;
+        margin: 2em 0 2em 0;
+        font-size: 1.5em;
     }
 
     #a-dono:hover {
@@ -350,10 +352,12 @@
     }
 
     #entropy {
+        font-size: 2em;
         max-width: 80vw;
         position: relative;
         top: 5vh;
         left: 20vw;
+        text-align: right;
     }
 
     #secret-nickname {
