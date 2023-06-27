@@ -11,10 +11,13 @@
     <div id="d-img"></div>
     <div id="d-ovr"></div>
 
-    <h1 id="h-weare" class="intro-header">WE ARE</h1>
-    <h1 id="h-sb" class="intro-header">SOUTH BAY</h1>
-    <h1 id="h-r" class="intro-header">ROBOTICS</h1>
-    <p id="entropy">A community FRC robotics team based in the South San Fransisco Bay Area. <span id="secret-nickname">AKA "The Nekonauts"</span></p>
+    <div id="h1-container">
+        <h1 id="h-weare" class="intro-header">WE ARE</h1>
+        <h1 id="h-sb" class="intro-header">SOUTH BAY</h1>
+        <h1 id="h-r" class="intro-header">ROBOTICS</h1>
+    </div>
+
+    <p id="entropy">A community FRC robotics team based in the South San Fransisco Bay Area.</p>
 
     <div class="arrow"></div>
 </div>
@@ -97,7 +100,7 @@
 
     <img id="i-team" src="{base}/photos/team.jpg" alt="Team @ Quinlan Community Center"/>
 
-    <a id="a-dono" href="https://www.paypal.com/donate?token=YqKsKxSKnXBe8lAZA-bqE71VJplXjvB2earQuL7NjNLvTS5O4-51NUPsr8c-bgSBykCrwMtb8ncfKHhi">Donate Here</a>
+    <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_top"><div class="hide" id="errorBox"></div><input type="hidden" name="button" value="donate"><input type="hidden" name="item_name" value="Charitable Donation"><input type="hidden" name="quantity" value="1"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="shipping" value="0"><input type="hidden" name="tax" value="0"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="business" value="chairman@valkyrierobotics.com"><input type="hidden" name="bn" value="JavaScriptButton_donate"><input type="hidden" name="env" value="www"><button id="b-dono" type="submit" class="paypal-button large">Donate</button></form>
 </div>
 
 <style>
@@ -136,7 +139,18 @@
         background-position: bottom;
         background-attachment: fixed;
         background-repeat: no-repeat;
+        z-index: 0;
     }
+
+    #d-ovr {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        opacity: 0.5;
+        z-index: 0;
+    }
+
 
     .arrow {
         position: absolute;
@@ -166,36 +180,38 @@
         border-left: 50px solid transparent;
     }
 
-    #d-ovr {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: var(--bg-color);
-        opacity: 0.60;
+    #h1-container {
+      display: flex;    
+      align-items: end;
+      flex-direction: column;
+      justify-content: start;
     }
-
     #h-weare {
-        top: 12vh;
-        left: 10vw;
-        width: 90vw;
+        width: 80vw;
         background-color: var(--red);
         color: var(--bg-color);
+        margin: .5em 0 0 0;
     }
 
     #h-sb {
-        top: 10vh;
-        left: 15vw;
-        width: 85vw;
+        width: 70vw;
         background-color: var(--green);
         color: var(--bg-color);
+        margin: .5em 0 0 0;
     }
 
     #h-r {
-        top: 8vh;
-        left: 20vw;
-        width: 80vw;
+        width: 60vw;
         background-color: var(--blue);
         color: var(--bg-color);
+        margin: .5em 0 0 0;
+    }
+
+    #entropy {
+        position: relative;
+        text-align: right;
+        font-size: 2em;
+        color: var(--text-color);
     }
 
     .text-section {
@@ -330,7 +346,7 @@
         background-color: var(--bg2-color);
     }
 
-    #a-dono {
+    #b-dono {
         all: unset;
         border: 1px solid var(--purple);
         color: var(--purple);
@@ -340,7 +356,7 @@
         font-size: 1.5em;
     }
 
-    #a-dono:hover {
+    #b-dono:hover {
         background-color: var(--purple);
         color: var(--bg2-color);
     }
@@ -349,19 +365,6 @@
         width: 40em;    
         max-width: 100%;
         margin-top: 5em;
-    }
-
-    #entropy {
-        font-size: 2em;
-        max-width: 80vw;
-        position: relative;
-        top: 5vh;
-        left: 20vw;
-        text-align: right;
-    }
-
-    #secret-nickname {
-        display: none;
     }
 
     @media screen and (max-width: 950px) {
