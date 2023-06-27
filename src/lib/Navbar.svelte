@@ -29,11 +29,13 @@
     }
 
     #nav-links {
-        margin: auto;
+        font-size: 1.75em;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     #nav-links a {
-        margin: 0 5vw;
         padding: 2px 4px;
         color: var(--text-color);
         text-decoration: none;

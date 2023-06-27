@@ -108,7 +108,7 @@
         width: 100%;
         min-height: calc(100vh - 50px);
         box-sizing: border-box;
-        padding-left: 5px;
+        font-size: 3vh;
     }
 
     .section:first-child {
@@ -116,13 +116,6 @@
         overflow-x: hidden;
         padding-left: 0;
         color: var(--text-color);
-    }
-
-    .intro-header {
-        position: relative;
-        font-size: 5em;
-        box-sizing: border-box;
-        padding: 10px 10px 0px 10px;
     }
 
     #intro {
@@ -186,31 +179,37 @@
       flex-direction: column;
       justify-content: start;
     }
+
+    .intro-header {
+        z-index: 1;
+        margin: .5em 0 0 0;
+        font-size: 2.5em;
+    }
+
     #h-weare {
+        min-width: 350px;
         width: 80vw;
         background-color: var(--red);
         color: var(--bg-color);
-        margin: .5em 0 0 0;
     }
 
     #h-sb {
+        min-width: 340px;
         width: 70vw;
         background-color: var(--green);
         color: var(--bg-color);
-        margin: .5em 0 0 0;
     }
 
     #h-r {
+        min-width: 330px;
         width: 60vw;
         background-color: var(--blue);
         color: var(--bg-color);
-        margin: .5em 0 0 0;
     }
 
     #entropy {
         position: relative;
-        text-align: right;
-        font-size: 2em;
+        text-align: center;
         color: var(--text-color);
     }
 
@@ -218,7 +217,6 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        font-size: 1.5em;
     }
 
     .text-section > h1 {
@@ -233,6 +231,7 @@
         color: var(--text-color);
         width: 80%;
         max-width: 1000px;
+        font-size: .9em;
     }
 
     #about {
@@ -250,7 +249,7 @@
     }
 
     #d-tenents {
-        width: max(800px, 50%);
+        width: max(350px, 50%);
         display: inline-flex;
         justify-content: space-between;
         position: relative;
