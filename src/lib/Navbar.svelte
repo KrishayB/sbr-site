@@ -29,7 +29,7 @@
     }
 
     #nav-links {
-        font-size: 1.75em;
+        font-size: 1.5em;
         display: flex;
         align-items: center;
         justify-content: space-evenly;

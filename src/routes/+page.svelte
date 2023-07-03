@@ -1,6 +1,16 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import ContactFooter from '$lib/ContactFooter.svelte';
+
+  let weare = false;
+  let sb = false;
+  let r = false;
+
+  function renderHeaders() {
+    setTimeout(() => { weare = true; }, 0);
+    setTimeout(() => { sb = true; }, 500);
+    setTimeout(() => { r = true; }, 1000);
+  }
 </script>
 
 <svelte:head>
@@ -11,10 +21,10 @@
     <div id="d-img"></div>
     <div id="d-ovr"></div>
 
-    <div id="h1-container">
-        <h1 id="h-weare" class="intro-header">WE ARE</h1>
-        <h1 id="h-sb" class="intro-header">SOUTH BAY</h1>
-        <h1 id="h-r" class="intro-header">ROBOTICS</h1>
+    <div id="h1-container" on:load={renderHeaders()}>
+        <h1 class:show={weare ? 'show' : ''} id="h-weare" class="intro-header">WE ARE</h1>
+        <h1 class:show={sb ? 'show' : ''} id="h-sb" class="intro-header">SOUTH BAY</h1>
+        <h1 class:show={r ? 'show' : ''} id="h-r" class="intro-header">ROBOTICS</h1>
     </div>
 
     <p id="entropy">A community FRC robotics team based in the South San Fransisco Bay Area.</p>
@@ -108,7 +118,7 @@
         width: 100%;
         min-height: calc(100vh - 50px);
         box-sizing: border-box;
-        font-size: 3vh;
+        font-size: 2.5vh;
     }
 
     .section:first-child {
@@ -139,11 +149,68 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: var(--bg-color);
+        background-color: var(--bg2-color);
         opacity: 0.5;
         z-index: 0;
     }
 
+    #h1-container {
+      display: flex;    
+      align-items: end;
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .intro-header {
+        z-index: 1;
+        margin: .5em 0 0 0;
+        font-size: 2.5em;
+        padding-left: .5em;
+
+        transition: 1s;
+        transition-timing-function: ease-out;
+        transform: translateX(500vw);
+    }
+
+    .show {
+        transform: translateX(0vw);
+    }
+
+    #h-weare {
+        min-width: 300px;
+        width: 80vw;
+        border: 4px solid var(--red);
+        color: var(--bg-color);
+        background-color: color-mix(in srgb, var(--red) 60%, transparent)
+    }
+
+    #h-sb {
+        min-width: 280px;
+        width: 70vw;
+        border: 4px solid var(--green);
+        color: var(--bg-color);
+        background-color: color-mix(in srgb, var(--green) 60%, transparent)
+    }
+
+    #h-r {
+        min-width: 260px;
+        width: 60vw;
+        border: 4px solid var(--blue);
+        color: var(--bg-color);
+        background-color: color-mix(in srgb, var(--blue) 60%, transparent)
+    }
+
+    #entropy {
+        color: var(--text-color);
+        bottom: 5em;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 50%;
+    }
 
     .arrow {
         position: absolute;
@@ -173,45 +240,6 @@
         border-left: 50px solid transparent;
     }
 
-    #h1-container {
-      display: flex;    
-      align-items: end;
-      flex-direction: column;
-      justify-content: start;
-    }
-
-    .intro-header {
-        z-index: 1;
-        margin: .5em 0 0 0;
-        font-size: 2.5em;
-    }
-
-    #h-weare {
-        min-width: 350px;
-        width: 80vw;
-        background-color: var(--red);
-        color: var(--bg-color);
-    }
-
-    #h-sb {
-        min-width: 340px;
-        width: 70vw;
-        background-color: var(--green);
-        color: var(--bg-color);
-    }
-
-    #h-r {
-        min-width: 330px;
-        width: 60vw;
-        background-color: var(--blue);
-        color: var(--bg-color);
-    }
-
-    #entropy {
-        position: relative;
-        text-align: center;
-        color: var(--text-color);
-    }
 
     .text-section {
         display: flex;
@@ -361,16 +389,9 @@
     }
 
     #i-team {
-        width: 40em;    
-        max-width: 100%;
+        width: 70%;
+        max-width: 800px;
         margin-top: 5em;
-    }
-
-    @media screen and (max-width: 950px) {
-        #d-img {
-            /* smaller image for mobile */
-            background-image: url("/photos/rgbrobot_mobile.jpg");
-        }
     }
 
 /* No alternate rules for now */
