@@ -1,16 +1,5 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  import ContactFooter from '$lib/ContactFooter.svelte';
-
-  let weare = false;
-  let sb = false;
-  let r = false;
-
-  function renderHeaders() {
-    setTimeout(() => { weare = true; }, 0);
-    setTimeout(() => { sb = true; }, 500);
-    setTimeout(() => { r = true; }, 1000);
-  }
 </script>
 
 <svelte:head>
@@ -21,13 +10,15 @@
     <div id="d-img"></div>
     <div id="d-ovr"></div>
 
-    <div id="h1-container" on:load={renderHeaders()}>
-        <h1 class:show={weare ? 'show' : ''} id="h-weare" class="intro-header">WE ARE</h1>
-        <h1 class:show={sb ? 'show' : ''} id="h-sb" class="intro-header">SOUTH BAY</h1>
-        <h1 class:show={r ? 'show' : ''} id="h-r" class="intro-header">ROBOTICS</h1>
+    <div id="h1-container">
+        <h1 id="h-weare" class="intro-header">WE ARE</h1>
+        <h1 id="h-sb" class="intro-header">SOUTH BAY</h1>
+        <h1 id="h-r" class="intro-header">ROBOTICS</h1>
     </div>
 
-    <p id="entropy">A community FRC robotics team based in the South San Fransisco Bay Area.</p>
+    <p id="entropy">
+        A community FRC robotics team based in the South San Fransisco Bay Area.
+    </p>
 
     <div class="arrow"></div>
 </div>
@@ -137,7 +128,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image: url("/photos/rgbrobot.jpg");
+        background-image: url("/photos/rgbrobot.png");
         background-size: cover;
         background-position: bottom;
         background-attachment: fixed;
@@ -161,43 +152,49 @@
       justify-content: start;
     }
 
+    @keyframes slidefromright {
+        0% {
+            transform: translateX(300vw);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
     .intro-header {
         z-index: 1;
         margin: .5em 0 0 0;
         font-size: 2.5em;
-        padding-left: .5em;
-
-        transition: 1s;
-        transition-timing-function: ease-out;
-        transform: translateX(500vw);
-    }
-
-    .show {
-        transform: translateX(0vw);
+        font-size: max(46px, 2.5em);
+        padding: 0 12px;
+        transform: translateX(300vw);
+        animation-name: slidefromright;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
     }
 
     #h-weare {
+        margin-top: 1.75em;
         min-width: 300px;
-        width: 80vw;
-        border: 4px solid var(--red);
+        width: 82vw;
         color: var(--bg-color);
-        background-color: color-mix(in srgb, var(--red) 60%, transparent)
+        background-color: var(--red);
     }
 
     #h-sb {
         min-width: 280px;
-        width: 70vw;
-        border: 4px solid var(--green);
+        width: 72vw;
         color: var(--bg-color);
-        background-color: color-mix(in srgb, var(--green) 60%, transparent)
+        background-color: var(--green);
+        animation-delay: 0.5s;
     }
 
     #h-r {
         min-width: 260px;
-        width: 60vw;
-        border: 4px solid var(--blue);
+        width: 62vw;
         color: var(--bg-color);
-        background-color: color-mix(in srgb, var(--blue) 60%, transparent)
+        background-color: var(--blue);
+        animation-delay: 1s;
     }
 
     #entropy {
@@ -394,35 +391,20 @@
         margin-top: 5em;
     }
 
-/* No alternate rules for now */
-/*
-    @media screen and (max-width: 950px) {
-        .section {
-            height: 65vh !important;
-        }
-
-        .intro-header {
-            font-size: 2em;
-        }
-
-        #h-weare {
-            top: 5vh;
-            left: 10vw;
-        }
-
-        #h-sb {
-            top: 3vh;
-            left: 15vw;
-        }
-
-        #h-r {
-            top: 1vh;
-            left: 20vw;
+    @media screen and (max-width: 980px) {
+        #d-img {
+            /* smaller image for mobile */
+            background-image: url("/photos/rgbrobot_mobile.png");
         }
 
         #entropy {
-            top: 1vh;
+            width: 70%;
+            font-size: 1.25em;
+            bottom: 7em;
+        }
+
+        .intro-header {
+            font-size: min(55px, 2.5em);
         }
     }
-*/
 </style>
