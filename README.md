@@ -1,5 +1,6 @@
 # South Bay Robotics Website
-This is the website and blog of the South Bay Robotics FRC team (aka the Nekonauts).
+This is the website and blog of the South Bay Robotics FRC team.
+It can be viewed at [https://www.southbayrobotics.org/](https://www.southbayrobotics.org/)
 
 ## Technical Overview
 The site is written in Sveltekit (with typescript).
