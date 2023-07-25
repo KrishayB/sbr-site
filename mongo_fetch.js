@@ -10,6 +10,7 @@ import { writeFileSync } from 'fs';
 
 //see if mongodb db connection string is set in env (make sure it is an encrypted secret if deploying with github pages)
 //the mongo db user should have READ ONLY permissions, so even if connection string is leaked, no one can fuck with the db
+console.log("Running")
 if (process.env.MONGODB_CONNECTION_STRING) {
     //connect to mongodb
     const client = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
@@ -23,4 +24,6 @@ if (process.env.MONGODB_CONNECTION_STRING) {
     writeFileSync("./src/lib/blog_posts.json", JSON.stringify(all_posts), "utf-8");
     console.log('done')
     process.exit();
+} else {
+    console.log("Missing MONGODB credentials");
 }
