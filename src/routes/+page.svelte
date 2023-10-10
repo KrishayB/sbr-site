@@ -99,7 +99,7 @@
       counts. <b>Thank you - our gratefulness cannot be overstated.</b>
     </p>
 
-    <img id="i-team" src="{base}/photos/team.jpg" alt="Team @ Quinlan Community Center"/>
+    <img id="i-team" src="{base}/photos/team.jpg" alt="Team Barbeque"/>
 
     <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_top"><div class="hide" id="errorBox"></div><input type="hidden" name="button" value="donate"><input type="hidden" name="item_name" value="Charitable Donation"><input type="hidden" name="quantity" value="1"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="shipping" value="0"><input type="hidden" name="tax" value="0"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="business" value="chairman@valkyrierobotics.com"><input type="hidden" name="bn" value="JavaScriptButton_donate"><input type="hidden" name="env" value="www"><button id="b-dono" type="submit" class="paypal-button large">Donate</button></form>
 </div>
