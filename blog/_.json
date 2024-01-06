@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "title":"Our Robot's Tech Stack!",
+      "author":"Skyler Mercedes",
+      "cover_alt":"Our ROBOT!!",
+      "cover_image":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Toyota_Robot_at_Toyota_Kaikan.jpg/172px-Toyota_Robot_at_Toyota_Kaikan.jpg",
+      "timestamp": 1690304129164,
+      "hidden":false,
+      "tags":["Software","Tech"],
+      "slug": "our-robots-tech-stack"
+    }
+  ]
+}

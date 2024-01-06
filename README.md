@@ -2,6 +2,28 @@
 This is the website and blog of the South Bay Robotics FRC team.
 It can be viewed at [https://www.southbayrobotics.org/](https://www.southbayrobotics.org/)
 
+## Adding Blog Posts
+Adding blog posts is pretty simple. Fork this repo, and add the article metadata to the json in [/blog/_.json](/blog/_.json). Here is an example:
+
+```json
+{
+    "title":"Our Robot's Tech Stack!",
+    "author":"Skyler Mercedes",
+    "cover_alt":"Our ROBOT!!",
+    "cover_image":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Toyota_Robot_at_Toyota_Kaikan.jpg/172px-Toyota_Robot_at_Toyota_Kaikan.jpg",
+    "timestamp": 1690304129164,
+    "hidden":false,
+    "tags":["Software","Tech"],
+    "slug": "our-robots-tech-stack"
+}
+```
+
+Slugs must be unique, and the timestamp is unix timestamp (milliseconds since Jan 1st 1970).
+
+For the actual blog post, just write markdown in `/blog/markdown`, with the file name being `<the slug in the json>.md`.
+
+To add images for use in blog posts, just upload them to `/static/photos` and use them in markdown like `![An example photo](/photos/example.png)`.
+
 ## Technical Overview
 The site is written in Sveltekit (with typescript).
 
@@ -50,34 +72,3 @@ npm run preview
 - Keep code formatted and readable. Try not to have large amounts of redundant code. The usual stuff.
 - Test test test test! Test to make sure your change is functional and doesn't break anything. Use the browser dev tools to check for mobile screen dimensions too (if applicable). If possible, test on a few different browsers (Chrome, Firefox, Safari [Edge, Brave, etc are all Chromium browsers so should be the same as Chrome]). **Safari tends to have a lot of bugs, and is behind on implementing the latest features, so keep that in mind.** Testing on Safari is kinda hard though, if you do not own an Apple computer, so you can check something like [CanIUse](https://caniuse.com/) or MDN to see the browser support for any JS or CSS features you use. Looking at you Mr. Tofy!
 - Remember, Sveltekit needs to prerender and statically build the site, so don't add anything that isn't compatible with prerendering, since the build will fail, and it won't deploy. Run `npm run build` and make sure it is successful.
-
-## Adding Blog Posts
-WIP. See [the github repo where we are making the blog admin interface](https://github.com/frc-sbr/blog-admin).
-
-Blog posts are written in Makoto-flavoured Markdown (basically the same as any other Markdown), and parsed into HTML by Makoto.
-
-Here's the typescript type for a blog post.
-
-```typescript
-type Post = {
-    //the slug is the identifier for the blog post - will be automatically handled for you
-    //eg the title "Bob's Guide to Eating Burgers" will become the slug "bobs-guide-to-eating-burgers"
-    slug: string,
-    title: string,
-    author: string,
-    //unix timestamp - will be automatically handled for you
-    timestamp: number,
-    //description for search engines and link embeds
-    description?: string,
-    //cover image url - preferably compress the image and upload it into /static/photos
-    cover_image?: string,
-    //cover image alt text for accessibility
-    cover_alt?: string,
-    //the markdown content of the post
-    md_content: string,
-    //a list of tags (suggested are: Update, Tech, Software, Hardware, Embedded, Travel, but any arbitrary tags are fine). Max 5, please.
-    tags: string[],
-    //if true, will not show on the site
-    hidden: boolean,
-}
-```
