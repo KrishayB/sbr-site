@@ -24,6 +24,8 @@ For the actual blog post, just write markdown in `/blog/markdown`, with the file
 
 To add images for use in blog posts, just upload them to `/static/photos` and use them in markdown like `![An example photo](/photos/example.png)`.
 
+Then make a PR.
+
 ## Technical Overview
 The site is written in Sveltekit (with typescript).
 
